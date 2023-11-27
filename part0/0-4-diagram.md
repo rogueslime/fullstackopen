@@ -34,3 +34,9 @@ sequenceDiagram
 	
 	Note right of browser: Browser executes callback to render notes list.
 ```
+
+```mermaid
+sequenceDiagram
+    Alice->>John: Hello John, how are you?
+    John-->>Alice: Great!
+```
