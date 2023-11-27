@@ -24,7 +24,7 @@ sequenceDiagram
     server-->>browser: JavaScript code for rendering list
     deactivate server
 
-    Note right of browser: Browser begins to execute JS code.
+    Note right of browser: Browser begins to execute JS code to fetch JSON
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server
