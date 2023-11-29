@@ -1,9 +1,8 @@
 const Total = (props) => {
-    const sections = props.parts
+    const sections = props.exs
     let partsLeft = 0
-  
     for(let i = 0; i < sections.length; i++) {
-      partsLeft += sections[i].exs
+      partsLeft += sections[i]
     }
   
     return (
