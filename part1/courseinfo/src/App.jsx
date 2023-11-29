@@ -1,22 +1,6 @@
-const Header = (props) => {
-  return (
-    <>
-      <h1>{props.courseheader}</h1>
-    </>
-  )
-}
-const Content = (props) => {
-  const sections = props.parts
-
-  return (
-    <ul>
-      {sections.map(function(section, index){
-        return <li key={ index }>{section}</li>
-      })}
-    </ul>
-  )
-}
-
+import Header from './Header.jsx'
+import Content from './Content.jsx'
+import Total from './Total.jsx'
 
 const App = () => {
   const course = 'Half Stack application development'
@@ -26,19 +10,18 @@ const App = () => {
   const exercises2 = 7
   const part3 = 'State of a component'
   const exercises3 = 14
-  const parts = ['Fundamentals of React','Using props to pass data','State of a component']
+
+  const sections = [
+    {section : part1, exs : exercises1},
+    {section : part2, exs : exercises2},
+    {section : part3, exs : exercises3}    
+  ]
 
   return (
     <div>
       <Header courseheader={course}/>
-      <Content parts={parts} numleft={exercises1}/>
-      <p>
-        {part2} {exercises2}
-      </p>
-      <p>
-        {part3} {exercises3}
-      </p>
-      <p>Number of exercises {exercises1 + exercises2 + exercises3}</p>
+      <Content parts = {sections}/>
+      <Total parts = {sections}/>
     </div>
   )
 }
