@@ -1,3 +1,8 @@
+import Part from './Part.jsx'
+
+/*
+First implementation of Content
+
 const Content = (props) => {
   let sections = []
 
@@ -9,7 +14,19 @@ const Content = (props) => {
   return (
     <ul>
       {sections.map(function(nextSection, index) {
-        return <li key = { index }>{nextSection.section} : {nextSection.exs}</li>
+        return <li key = { index }><Part part={nextSection.section} exs={nextSection.exs}/></li>
+      })}
+    </ul>
+  )
+}
+*/
+
+const Content = (props) => {
+  return (
+    <ul>
+      {props.parts.map(function(nextPart, index) {
+        console.log(nextPart, index)
+        return <li key = {index}><Part part={nextPart} exs={props.exs[index]}/></li>
       })}
     </ul>
   )
