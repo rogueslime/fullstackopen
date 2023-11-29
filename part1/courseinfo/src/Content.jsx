@@ -26,7 +26,7 @@ const Content = (props) => {
     <ul>
       {props.parts.map(function(nextPart, index) {
         console.log(nextPart, index)
-        return <li key = {index}><Part part={nextPart} exs={props.exs[index]}/></li>
+        return <li key={index}><Part part={nextPart.part} exs={nextPart.exs}/></li>
       })}
     </ul>
   )
