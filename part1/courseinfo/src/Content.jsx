@@ -24,7 +24,7 @@ const Content = (props) => {
 const Content = (props) => {
   return (
     <ul>
-      {props.parts.map(function (nextPart, index) {
+      {props.course.parts.map(function (nextPart, index) {
         console.log(nextPart, index)
         return <li key={index}><Part part={nextPart.name} exs={nextPart.exercises} /></li>
       })}

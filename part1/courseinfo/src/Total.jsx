@@ -1,5 +1,5 @@
 const Total = (props) => {
-  const sections = props.parts
+  const sections = props.course.parts
   let partsLeft = 0
   for (let i = 0; i < sections.length; i++) {
     partsLeft += sections[i].exercises
